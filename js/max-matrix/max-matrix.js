@@ -55,7 +55,7 @@ function findMax(arr, moves, k, j) {
             ...moves.slice(index + 1, moves.length),
         ];
 
-        return findMax(nextArr, movesLeft, k - 1);
+        return findMax(nextArr, movesLeft, k - 1, j);
     });
 
     return Math.max(...maxValues);
@@ -72,8 +72,6 @@ const test = [
     [7, 8, 9],
 ];
 
-console.log(`result: ${sumArray(test, 2)} = 12`);
-console.log(`moves: ${generateMoves(test, 1)}`);
 console.log(`maxMatrix: ${maxMatrix(test, 2, 1)}`);
 
 const testArr2 = [
@@ -83,14 +81,4 @@ const testArr2 = [
     [16, 17, 18, 19, 20],
     [21, 22, 23, 24, 25],
 ];
-console.log(`moves: ${generateMoves(testArr2, 2)}`);
-
-const testArr3 = [
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15],
-    [16, 17, 18, 19, 20],
-    [21, 22, 23, 24, 25],
-];
-console.log(swapRow(testArr3, 2));
-console.log(swapColumn(testArr3, 2));
+console.log(`maxMatrix: ${maxMatrix(testArr2, 6, 2)}`);
