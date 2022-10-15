@@ -66,19 +66,12 @@ function maxMatrix(arr, maxMoves, j) {
     return findMax(arr, moves, maxMoves, j);
 }
 
-const test = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-];
-
-console.log(`maxMatrix: ${maxMatrix(test, 2, 1)}`);
-
-const testArr2 = [
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15],
-    [16, 17, 18, 19, 20],
-    [21, 22, 23, 24, 25],
-];
-console.log(`maxMatrix: ${maxMatrix(testArr2, 6, 2)}`);
+module.exports = {
+    sumArray,
+    generateMoves,
+    swapRow,
+    swapColumn,
+    swap,
+    findMax,
+    maxMatrix,
+}
