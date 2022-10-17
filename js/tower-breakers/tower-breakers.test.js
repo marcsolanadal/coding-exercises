@@ -24,19 +24,6 @@ describe("tower-breakers", () => {
         test("hits a base case when all towers are 1", () => {
             expect(gameLoop([1, 1])).toBe(0);
         });
-
-        test("returns the correct turn when the basecase was hit", () => {
-            expect(gameLoop([1, 3])).toEqual([[], [1]]);
-            expect(gameLoop([3, 3])).toEqual([[[1], [1]], [[1], [1]]]);
-            // expect(gameLoop([6, 3])).toBe(3);
-            // expect(gameLoop([7, 3])).toBe(2);
-        });
-    });
-
-    describe("play()", () => {
-        test("gets last ", () => {
-            expect(play([3, 3])).toEqual([1, 2, 3, 4, 6]);
-        });
     });
 
 });
